@@ -1,0 +1,43 @@
+body{
+    font-family: 'Arial';
+}
+
+h1{
+    font-size: 18px;    
+    margin: 0;
+}
+
+h2{
+    font-size: 18px;
+    color: rgb(150, 150, 150);
+    padding-top: 2px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+th {    
+    width: 80px;            
+}
+
+table{  
+  font-size: 12px;                    
+  border-spacing: 0;    
+}
+
+#estado {      
+  width: 150px;    
+  height: 20px;
+}
+
+#suspeitos,#confirmados,#descartados{
+  border-left: 1px solid rgb(216, 216, 216);    
+  text-align: center;
+}
+
+#referencias{
+    text-align: right;
+}
+
+tr:nth-child(even) {background-color: rgb(228, 228, 228);}
+
+tr:last-child {background-color: red; color: white;}
