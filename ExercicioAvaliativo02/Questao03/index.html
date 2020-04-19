@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Lista</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/indexscripts.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="label">
+                <label>Título da lista:</label>
+            </td>
+            <td>
+                <input type="text" id="title"><br>
+            </td>
+        </tr>
+        <tr>
+            <td class="label">
+                <label>Novo tópico:</label>
+            </td>
+            <td>
+                <input type="text" id="newtopic">
+            </td>
+            <td>
+                <input type="button" id="accept" class="accept" value="Adicionar" onclick="addList()"><br>
+            </td>
+        </tr>   
+        <tr>
+            <td class="label">    
+                <label>Conteúdo da lista:</label>
+            </td>
+            <td>
+                <select id="cboptions" class="content">                    
+                </select><br>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td class="generate">
+                <input type="button" id="generatelist" value="Gerar Lista Combo" onclick="generateList()">
+            </td>
+        </tr> 
+    </table>
+    <table>
+        <tr>
+            <td class="generate">
+                <input type="button" id="generatelist" value="Gerar Array" onclick="addArray()">
+            </td>
+        </tr> 
+    </table>    
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+table{
+    margin: auto;
+}
+
+.label{
+    text-align: right;
+}
+
+.content{
+    width: 100%;
+}
+
+.generate{    
+    display: flex;    
+    justify-content: center;    
+}

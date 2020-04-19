@@ -1,0 +1,152 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;        
+    margin: auto;    
+    flex-direction: column;
+    width: 90%;
+    background-color: black;
+    color: white;    
+}
+
+header{
+    margin: 35px 0px 0px 0px;
+    background-color: rgb(75, 75, 75);    
+}
+
+header h1{
+    padding-left: 15px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    width: 90px;
+}
+
+footer{
+    margin: 2px 0px 35px 0px;
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+}
+
+nav, main{    
+    margin: 2px 0px 0px 0px;
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+}
+
+header, footer, body, .menu{
+    display: flex;
+}
+
+footer{    
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    padding: 15px 0px 15px 30px;    
+}
+
+.menu{    
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px;
+    padding: 0px;
+}
+
+.item1 ul{
+    position: absolute;
+    margin: auto;
+    padding: 0px;
+}
+
+.item2 ul{
+    position: absolute;
+    margin: auto;
+    padding: 0px;
+}
+
+.item3 ul{
+    position: absolute;
+    margin: auto;
+    padding: 0px;
+}
+
+.item1 ul{
+    display: none;
+}
+.item2 ul{
+    display: none;
+}
+.item3 ul{
+    display: none;
+}
+
+.item1:hover ul{
+    display: block;
+    -webkit-transform: translateX(-12%);
+    transform: translateX(-12%);
+}
+
+.item2:hover ul{
+    display: block;
+    -webkit-transform: translateX(-25%);
+    transform: translateX(-25%);
+}
+
+.item3:hover ul{
+    display: block;
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+}
+
+.item1:hover ul li{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item2:hover ul li{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item3:hover ul li{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.subitem{
+    background-color: black;
+    opacity: 95%;
+}
+
+.subitem:hover{
+    background-color: rgb(251, 204, 53);    
+    color: black;
+}
+
+main{
+    text-align: center;    
+}
+
+main p{
+    text-indent: 35px;
+    text-align: justify;
+    margin: 15px;
+}
+
+main img{
+    width: 90%;
+}
+
+footer{
+    height: 65px;    
+    text-align: center;
+}

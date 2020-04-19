@@ -1,0 +1,32 @@
+body{
+    margin: auto;
+    width: 50%;
+    display: flex;
+
+}
+
+main{
+    margin: auto;    
+}
+
+.input{
+    margin-bottom: 5px;
+}
+
+.submit{
+    width: 100%;    
+    margin-bottom: 5px;
+    background-color:rgb(108, 172, 255);
+    color: white;
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.submit:hover{
+    background-color: white;
+    color: blue;
+}
+
+.resultado{
+    width: 97%;
+}

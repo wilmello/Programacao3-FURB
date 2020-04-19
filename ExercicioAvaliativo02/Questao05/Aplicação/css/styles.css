@@ -1,0 +1,54 @@
+body{
+    width: 50%;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{    
+    display: flex;
+    flex-wrap: wrap;    
+    flex-direction: row;    
+    margin: auto;    
+}
+
+.field{
+    margin-top: 5px;
+    background-color: rgb(124, 124, 124);
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    height: 25px;
+}
+
+.field:hover{
+    background-color: white;
+    color:black;
+}
+
+.submit{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+    border-radius: 5px;
+    background-color: rgb(112, 112, 255);
+    border: 1px solid blue;
+    color: white;
+}
+
+.submit:hover{
+    background-color: white;
+    color: blue;
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        display: flex;
+        flex-wrap: wrap;        
+        flex-direction: column;
+    }
+}
