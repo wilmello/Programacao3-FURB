@@ -1,0 +1,22 @@
+main{
+    padding-bottom: 50px;
+}
+
+#carouselitem{
+    height: 350px;
+}    
+
+.carousel-item h5,
+.title-carrousel{
+    font-weight: bold; 
+    font-size: 27px; 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+}
+
+@media screen and (max-width: 640px) {
+           
+    #carouselitem{        
+        width: 100%;
+    } 
+}

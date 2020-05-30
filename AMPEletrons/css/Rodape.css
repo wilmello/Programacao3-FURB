@@ -1,0 +1,19 @@
+#myFooter {
+    background-color: rgb(87, 88, 90);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    z-index: 20; /* Define quem vai ficar acima de quem */
+}
+
+#myFooter .footer-copyright p {    
+    color: white;
+}
+@media screen and (max-width: 665px) {
+    
+    #myFooter {        
+        height: 50px;        
+    }
+}

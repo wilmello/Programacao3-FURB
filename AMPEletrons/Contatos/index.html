@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/menu.css">    
+    <link rel="stylesheet" href="../css/rodape.css">
+    <link rel = "shortcut icon" href="../AMPEletrons.png"/>
+    <title>Contatos | AMP Eletrons</title>
+    <script src="scripts/scripts.js"></script>    
+  </head>
+  <body>
+    <header id="cabecalho"> 
+      <a href="../">
+        <img src="../img/cabecalho/logo.jpg" alt="AMP Eletrons">
+      </a>
+    </header>
+      <nav id="menu">
+        <div style="float: right;">
+          <a href="../login/">
+            <button type="button" class="btn btn-success" id="login">Login</button>            
+          </a>
+        </div>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="../">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produtos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="../Produtos/Dimmer/">Dimmer</a>                
+                <a class="dropdown-item" href="../Produtos/SistemaEmbarcado/">Sistema Embarcado</a>              
+                <a class="dropdown-item" href="../Produtos/Temporizadores/">Temporizadores</a>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../AssistenciaTecnica/">Assistência Técnica</a>        
+          </li>    
+          <li class="nav-item">
+            <a class="nav-link" href="../QuemSomos/">Quem Somos</a>
+          </li>
+          <li class="nav-item-active">
+            <a class="nav-link" href="">Contatos</a>
+          </li>
+        </ul>
+      </nav>
+    <main>
+      <div class="jumbotron">              
+        <h1 class="display-4">Redes Sociais</h1>
+        <hr class="my-4">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <img src="img/whatsapp.png" style="width: 70px;">
+                   WhatsApp
+                </button>
+              </h2>
+            </div>
+        
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <P style="font-weight: bold;" id="whatsapp">
+                  (48) 9 9823-6290  
+                </P>  
+                <button type="button" class="btn btn-primary" onclick="copyWhatsApp()">Copiar</button>              
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <img src="img/hotmail.png" style="width: 70px;">
+                  Hotmail/Outlook
+                </button>              
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <P style="font-weight: bold;" id="hotmail">
+                  amp_maquinas@hotmail.com                
+                </P>
+                <button type="button" class="btn btn-primary" onclick="copyHotmail()">Copiar</button>                            
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                  <img src="img/facebook.png" style="width: 70px;">
+                  Facebook
+                </button>              
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <P style="font-weight: bold;" id="hotmail">
+                  facebook_amp_eletrons
+                </P>
+                <button type="button" class="btn btn-primary" onclick="copyFacebook()">Copiar</button>                            
+              </div>
+            </div>
+          </div>       
+        </div>
+        <hr class="my-4">
+      </div>      
+    </main>    
+    <footer id="myFooter">        
+      <div class="footer-copyright">
+        <p>
+          © 2020 Copyright AMP Eletrons, Fone: (48) 9 9823-6290, E-mail: amp_maquinas@hotmail.com
+        </p>            
+      </div>
+    </footer>                
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

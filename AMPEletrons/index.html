@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/main.css">    
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel = "shortcut icon" href="AMPEletrons.png"/>
+    <title>AMP Eletrons</title>
+    <style>           
+      #carouselExampleCaptions{          
+          margin: auto; 
+          height: 350px;
+          width: 500px;
+        }
+      @media screen and (max-width: 640px) {
+        
+        .display-4{
+          font-size: 45px;
+        }
+
+        #carouselExampleCaptions{          
+          width: 100%;
+        }
+        
+      }  
+    </style>
+  </head>  
+  <body>
+    <header id="cabecalho"> 
+      <a href="">
+        <img src="img\cabecalho\logo.jpg" alt="AMP Eletrons">
+      </a>
+    </header>
+      <nav id="menu">
+        <div style="float: right;">
+          <a href="login/">
+            <button type="button" class="btn btn-success" id="login">Login</button>            
+          </a>
+        </div>
+        <ul class="nav justify-content-center">
+          <li class="nav-item-active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Produtos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="Produtos/Dimmer/">Dimmer</a>                
+                <a class="dropdown-item" href="Produtos/SistemaEmbarcado/">Sistema Embarcado</a>                
+                <a class="dropdown-item" href="Produtos/Temporizadores/">Temporizadores</a>
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AssistenciaTecnica/">Assistência Técnica</a>        
+          </li>    
+          <li class="nav-item">
+            <a class="nav-link" href="QuemSomos/">Quem Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contatos/">Contatos</a>
+          </li>
+        </ul>
+      </nav>
+    <main>
+      <div class="jumbotron" style="padding: 25px;">
+        <h1 class="display-4">Serviços/Produtos</h1>
+        <hr class="my-4">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="AssistenciaTecnica/">
+                <img src="AssistenciaTecnica\img\assistenciatecnica.jpg" class="d-block w-100" alt="Assitência Técnica" id="carouselitem">
+              </a>  
+              <div class="carousel-caption d-none d-md-block">
+                <h5>
+                  Assistência Técnica
+                </h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="Produtos/Dimmer/">
+                <img src="Produtos\Dimmer\img\Dimmer_potencia_3500w_cima.jpg" class="d-block w-100" alt="Dimmers" id="carouselitem">
+              </a>  
+              <div class="carousel-caption d-none d-md-block">
+                <h5>
+                  Dimmers
+                </h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="Produtos/SistemaEmbarcado/">
+                <img src="Produtos\SistemaEmbarcado\img\Mini_clp_pic_16f628a_Exemplo1.jpg" class="d-block w-100" alt="Sistemas Embarcados" id="carouselitem">
+              </a>  
+              <div class="carousel-caption d-none d-md-block">
+                <h5>
+                  Sistemas Embarcados
+                </h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="Produtos/Temporizadores/">
+                <img src="Produtos\Temporizadores\img\temporizador_0_a_30s.jpg" class="d-block w-100" alt="Temporizadores" id="carouselitem">
+              </a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>
+                  Temporizadores
+                </h5>
+              </div>
+            </div>            
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <hr class="my-4">
+      </div>
+    </main>    
+    <footer id="myFooter">        
+      <div class="footer-copyright">
+        <p>
+          © 2020 Copyright AMP Eletrons, Fone: (48) 9 9823-6290, E-mail: amp_maquinas@hotmail.com
+        </p>            
+      </div>
+    </footer>                
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

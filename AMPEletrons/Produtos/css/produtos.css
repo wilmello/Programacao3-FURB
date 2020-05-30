@@ -1,0 +1,18 @@
+main{
+    display: flex;
+    flex: 1;    
+}
+
+.card{            
+    margin: auto;        
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.carousel-item img, 
+.carousel-item.active img, 
+.card img{    
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
