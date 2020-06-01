@@ -59,3 +59,16 @@ function validaCampos(){
         }
     }                        
 }
+
+function limparcampos(){
+    //debugger;
+    document.getElementById("nome").value = "";    
+    document.getElementById("sobreNome").value = "";    
+    document.getElementById("senha").value = "";    
+    document.getElementById("confirmaSenha").value = "";    
+    document.getElementById("email").value = "";                        
+    document.getElementById("confirmaEmail").value = "";                                
+    document.getElementById("nomeUsuario").value = "";                                
+    document.getElementById("telefone").value = "";                                
+    document.getElementById("termos").checked = false;
+}
