@@ -1,0 +1,56 @@
+body{
+    width: 75%;    
+    margin: auto;
+}
+
+form{
+    width: 500px;    
+    margin: auto;
+}
+
+.btnControls{
+    width: 205px;
+    margin: auto;    
+}
+
+.tableEmployees{
+    width: 100%;
+}
+
+.tableEmployees tr,
+.tableEmployees td{
+    padding: 5px;    
+}
+
+.tableEmployees tr:nth-child(1) {
+    background-color: #373aff;
+    color: white;
+    
+    height: 50px;
+}
+
+.tableEmployees tr:nth-child(even) {
+    background-color: rgb(192, 192, 192);    
+}
+
+.tableEmployees tr:hover{
+    background-color: #95d8ff;
+}
+
+#iconEdit,
+#iconDelete{
+    width: 23px;
+    height: auto;
+}
+
+.alert.success{
+    padding: 20px;
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;    
+    opacity: 0.8;
+    width: 75%;
+    transition: opacity 0.6s;
+    background-color: #4CAF50;
+    color: white;
+  }
