@@ -1,7 +1,19 @@
 
 $(document).ready(function(){
-                        
-    var employees = sendAPI("GET", "http://dummy.restapiexample.com/api/v1/employees", false, null); // Solicita a requisição
+             
+    loadEmployess();
+
+});
+
+function loadEmployess(){
+
+    debugger;
+
+    if(document.getElementById( "idTableEmployees" ) != null){
+        $("#idTableEmployees").remove();
+    }
+
+    var employees = sendAPI("GET", "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/employees", false, null); // Solicita a requisição
                 
     var header = document.createElement("tr"); //Cabeçalho
     
@@ -44,7 +56,7 @@ $(document).ready(function(){
         columnName.innerHTML         = employees[i].employee_name;
         columnSalary.innerHTML       = "R$ "+ employees[i].employee_salary;
         columnAge.innerHTML          = employees[i].employee_age;
-        columnProfileImage.innerHTML = employees[i].profile_image;
+        columnProfileImage.innerHTML = employees[i].profile_imagem;
         
         ActionEdit   = document.createElement("img");
         ActionDelete = document.createElement("img");
@@ -72,15 +84,16 @@ $(document).ready(function(){
         table.appendChild( line );
     }
 
-    table.setAttribute('class', 'tableEmployees');
+    table.setAttribute("class", "tableEmployees");
+    table.setAttribute("id", "idTableEmployees");
 
-    document.getElementById("componentMain").appendChild( table );            
-
-});
+    document.getElementById("componentMain").appendChild( table );    
+}
 
 function editEmployee(idEmployee, nameEmployee, salaryEmployee, ageEmployee, profileImageEmployee){    
+    document.getElementById("titleForm").innerHTML   = "Empreado #"+ idEmployee;
     $('html, body').animate({scrollTop : 0},100);        
-    document.getElementById("employee_id").value     = idEmployee;    
+    document.getElementById("employee_id").value     = idEmployee;
     document.getElementById("employee_name").value   = nameEmployee;
 // Simulando uma variável global em uma das propriedades do botão salvar kkkkkkkk    
     document.getElementById("employee_name").placeHolder = nameEmployee;    
@@ -109,6 +122,7 @@ function saveEmployee(){
         //Se cair aqui é por que o cabomgue meteu um update        
         putEmployee(employee_id);
     }
+    loadEmployess();
     //$("#spinSave").remove();
     //$("#btnSave").innerHTML = "Salvar";
     //document.getElementById("btnSave").innerHTML = "Salvar";
@@ -126,14 +140,14 @@ function postEmployee(){
 
     //sendAPI
     sendAPI("POST", 
-            "http://dummy.restapiexample.com/api/v1/create", 
+            "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/create", 
             false,
             myJSON);
     
     successMessage("Empregado "+ myEmployeeInf.name +" adicionado com sucesso!");
 
     //RestarForm
-    clearForm();
+    clearForm();    
     
 }
 
@@ -149,7 +163,7 @@ function putEmployee(idEmployee){
 
     //sendAPI
     sendAPI("PUT",
-            "http://dummy.restapiexample.com/api/v1/update/"+ idEmployee,
+            "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/update/"+ idEmployee,
             false,
             myJSON
             );
@@ -157,7 +171,7 @@ function putEmployee(idEmployee){
     successMessage("Empregado "+ document.getElementById("employee_name").placeHolder +" atualizado com sucesso!");
 
     //RestarForm
-    clearForm();
+    clearForm();    
 }
 
 function deleteEmployee(idEmployee, nameEmployee){
@@ -166,7 +180,7 @@ function deleteEmployee(idEmployee, nameEmployee){
 
         //Delete
         sendAPI("DELETE",
-                "http://dummy.restapiexample.com/api/v1/delete/"+ idEmployee,
+                "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/delete/"+ idEmployee,
                 false,
                 ""
                 );
@@ -174,6 +188,7 @@ function deleteEmployee(idEmployee, nameEmployee){
         
         //RestarForm
         clearForm();
+        loadEmployess();
     }
 }
 
@@ -219,6 +234,7 @@ function timeOut(){
 }
 
 function clearForm(){    
+    document.getElementById("titleForm").innerHTML   = "Novo Empregado";
     document.getElementById("employee_id").value     = "";
     document.getElementById("employee_name").value   = "";
     document.getElementById("employee_salary").value = "";
