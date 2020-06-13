@@ -68,8 +68,8 @@ function loadEmployess(){
         ActionDelete.src = "img/delete.png";
                 
 
-        ActionEdit.setAttribute("onclick", "editEmployee("+ employees[i].id +",'"+ employees[i].employee_name +"','"+ employees[i].employee_salary +"','"+ employees[i].employee_age +"','"+ employees[i].profile_image +"')"); // Maldito onclick que ninguem do google sabe como setar, kkkkk
-        ActionDelete.setAttribute("onclick", "deleteEmployee("+ employees[i].id +",'"+ employees[i].employee_name +"')"); // Maldito onclick que ninguem do google sabe como setar, kkkkk
+        ActionEdit.setAttribute("onclick", "editEmployee('"+ employees[i].id +"','"+ employees[i].employee_name +"','"+ employees[i].employee_salary +"','"+ employees[i].employee_age +"','"+ employees[i].profile_image +"')"); // Maldito onclick que ninguem do google sabe como setar, kkkkk
+        ActionDelete.setAttribute("onclick", "deleteEmployee('"+ employees[i].id +"','"+ employees[i].employee_name +"')"); // Maldito onclick que ninguem do google sabe como setar, kkkkk
 
         columnAction.appendChild( ActionEdit );
         columnAction.appendChild( ActionDelete );            
@@ -91,7 +91,7 @@ function loadEmployess(){
 }
 
 function editEmployee(idEmployee, nameEmployee, salaryEmployee, ageEmployee, profileImageEmployee){    
-    document.getElementById("titleForm").innerHTML   = "Empreado #"+ idEmployee;
+    document.getElementById("titleForm").innerHTML   = "Empreado #"+ nameEmployee;
     $('html, body').animate({scrollTop : 0},100);        
     document.getElementById("employee_id").value     = idEmployee;
     document.getElementById("employee_name").value   = nameEmployee;
@@ -131,12 +131,12 @@ function saveEmployee(){
 function postEmployee(){
 
     //POST
-    var myEmployeeInf           = new Object(); // Employee Object
-    myEmployeeInf.name          = document.getElementById("employee_name").value;
-    myEmployeeInf.salary        = document.getElementById("employee_salary").value;
-    myEmployeeInf.age           = document.getElementById("employee_age").value;
-    myEmployeeInf.profile_image = document.getElementById("profile_image").value;        
-    myJSON                      = JSON.stringify( myEmployeeInf ); // String to JSON Object
+    var myEmployeeInf            = new Object(); // Employee Object
+    myEmployeeInf.name           = document.getElementById("employee_name").value;
+    myEmployeeInf.salary         = document.getElementById("employee_salary").value;
+    myEmployeeInf.age            = document.getElementById("employee_age").value;
+    myEmployeeInf.profile_imagem = document.getElementById("profile_image").value;        
+    myJSON                       = JSON.stringify( myEmployeeInf ); // String to JSON Object
 
     //sendAPI
     sendAPI("POST", 
@@ -154,12 +154,12 @@ function postEmployee(){
 function putEmployee(idEmployee){    
 
     //PUT
-    var myEmployeeInf           = new Object(); // Employee Object
-    myEmployeeInf.name          = document.getElementById("employee_name").value;
-    myEmployeeInf.salary        = document.getElementById("employee_salary").value;
-    myEmployeeInf.age           = document.getElementById("employee_age").value;
-    myEmployeeInf.profile_image = document.getElementById("profile_image").value;        
-    myJSON                      = JSON.stringify( myEmployeeInf ); // String to JSON Object
+    var myEmployeeInf            = new Object(); // Employee Object
+    myEmployeeInf.name           = document.getElementById("employee_name").value;
+    myEmployeeInf.salary         = document.getElementById("employee_salary").value;
+    myEmployeeInf.age            = document.getElementById("employee_age").value;
+    myEmployeeInf.profile_imagem = document.getElementById("profile_image").value;        
+    myJSON                       = JSON.stringify( myEmployeeInf ); // String to JSON Object
 
     //sendAPI
     sendAPI("PUT",
