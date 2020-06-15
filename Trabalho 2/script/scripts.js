@@ -13,7 +13,7 @@ function loadEmployess(){
         $("#idTableEmployees").remove();
     }
 
-    var employees = sendAPI("GET", "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/employees", false, null); // Solicita a requisição
+    var employees = sendAPI("GET", "http://rest-api-employees.jmborges.site/api/v1/employees", false, null); // Solicita a requisição
                 
     var header = document.createElement("tr"); //Cabeçalho
     
@@ -140,7 +140,7 @@ function postEmployee(){
 
     //sendAPI
     sendAPI("POST", 
-            "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/create", 
+            "http://rest-api-employees.jmborges.site/api/v1/create", 
             false,
             myJSON);
     
@@ -163,7 +163,7 @@ function putEmployee(idEmployee){
 
     //sendAPI
     sendAPI("PUT",
-            "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/update/"+ idEmployee,
+            "http://rest-api-employees.jmborges.site/api/v1/update/"+ idEmployee,
             false,
             myJSON
             );
@@ -180,7 +180,7 @@ function deleteEmployee(idEmployee, nameEmployee){
 
         //Delete
         sendAPI("DELETE",
-                "https://us-central1-rest-api-employees.cloudfunctions.net/api/v1/delete/"+ idEmployee,
+                "http://rest-api-employees.jmborges.site/api/v1/delete/"+ idEmployee,
                 false,
                 ""
                 );
