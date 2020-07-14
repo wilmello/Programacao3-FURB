@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 function saveIconPlayer(){
     var icons = sendAPI("GET",
-                       "http://restapigame.ddns.net:5000/api/v1/icon",
+                       "http://localhost:5000/api/v1/icon",
                        false,
                        null);
     icons = icons.data;
@@ -41,7 +41,7 @@ function saveIconPlayer(){
     for(var i = 0; i < icons.length; i++){
         if(icons[i].name == iconSelected[0].textContent){
             var player = sendAPI("GET",
-                                 "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+                                 "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
                                  false,
                                  null);
             player = player.data;
@@ -49,7 +49,7 @@ function saveIconPlayer(){
             jsonUser = JSON.stringify(player);
 
             sendAPI("PUT",
-                    "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+                    "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
                     false,
                     jsonUser);
             return;
@@ -59,12 +59,12 @@ function saveIconPlayer(){
 
 function resetImgGame(){    
     var player = sendAPI("GET",
-                         "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+                         "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
                          false,
                          null);
     player = player.data;                     
     var icon = sendAPI("GET",
-                       "http://restapigame.ddns.net:5000/api/v1/icon?idicon="+ player.icongame,
+                       "http://localhost:5000/api/v1/icon?idicon="+ player.icongame,
                        false,
                        null);
     icon = icon.data;
@@ -83,12 +83,12 @@ function resetImgGame(){
 
 function loadIcons(){
     var icons = sendAPI("GET",
-                        "http://restapigame.ddns.net:5000/api/v1/icon",
+                        "http://localhost:5000/api/v1/icon",
                         false,
                         null);
     if(icons.data != null){
         var player = sendAPI("GET",
-                             "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+                             "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
                              false,
                              null);
         player = player.data;                     
@@ -125,7 +125,7 @@ function selectIcon(nameIcon, addressIcon){
 
 function createLinkRoomPlayer(){
     sendAPI("POST",
-            "http://restapigame.ddns.net:5000/api/v1/roomplayer?idplayer="+ sessionStorage.getItem("idPlayer") +"&idroom="+ sessionStorage.getItem("idRoom"),
+            "http://localhost:5000/api/v1/roomplayer?idplayer="+ sessionStorage.getItem("idPlayer") +"&idroom="+ sessionStorage.getItem("idRoom"),
             false,
             null
             );
@@ -133,14 +133,14 @@ function createLinkRoomPlayer(){
 
 function getRoom(){
     return sendAPI("GET",
-                   "http://restapigame.ddns.net:5000/api/v1/room?idroom="+ sessionStorage.getItem("idRoom"),
+                   "http://localhost:5000/api/v1/room?idroom="+ sessionStorage.getItem("idRoom"),
                    false,
                    null);
 }
 
 function getPlayer(){
     return sendAPI("GET",
-                   "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+                   "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
                    false,
                    null);
 }
@@ -153,7 +153,7 @@ function leaveRoom(){
 
 function destroyLinkRoomPlayer(){
     sendAPI("DELETE",
-            "http://restapigame.ddns.net:5000/api/v1/roomplayer?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer"),
+            "http://localhost:5000/api/v1/roomplayer?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer"),
             false,
             null
             );
@@ -162,7 +162,7 @@ function destroyLinkRoomPlayer(){
 function updatePlayer(){
     //alert("2,5 segundos");    
     var players = sendAPI("GET",
-                          "http://restapigame.ddns.net:5000/api/v1/roomplayer?idroom="+ sessionStorage.getItem("idRoom"),
+                          "http://localhost:5000/api/v1/roomplayer?idroom="+ sessionStorage.getItem("idRoom"),
                           false,
                           null);    
     $("tr").remove();
@@ -190,7 +190,7 @@ function updatePlayer(){
 
 function startGame(){
     sendAPI("POST",
-            "http://restapigame.ddns.net:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom"),
+            "http://localhost:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom"),
             false,
             null
             );

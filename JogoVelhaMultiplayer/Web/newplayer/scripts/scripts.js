@@ -9,7 +9,7 @@ function validateDuplicatedNickname(){
     var user = document.getElementById("nome_cad").value;    
 
     var result = sendAPI("GET", 
-                         "http://restapigame.ddns.net:5000/api/v1/player", 
+                         "http://localhost:5000/api/v1/player", 
                          false, 
                          null);
 
@@ -39,7 +39,7 @@ function savePlayer(){
         jsonUser = JSON.stringify(objUser);
         debugger;
         result = sendAPI("POST", 
-                         "http://restapigame.ddns.net:5000/api/v1/player",
+                         "http://localhost:5000/api/v1/player",
                          false, 
                          jsonUser);
 

@@ -10,7 +10,7 @@ function validaLogin() {
     var password = document.getElementById("senha_login").value;
 
     var result = sendAPI("GET", 
-                         "http://restapigame.ddns.net:5000/api/v1/player?name="+ user +"&password="+ password, 
+                         "http://localhost:5000/api/v1/player?name="+ user +"&password="+ password, 
                          false, 
                          null);
     

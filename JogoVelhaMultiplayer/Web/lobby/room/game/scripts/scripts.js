@@ -28,12 +28,12 @@ function updateStatusGame(){
         var gameBoardOpponent = gameBoards[0]; // Adversário
         var gameBoardMy       = gameBoards[1]; // jogador Atual
         var playerOpponent    = sendAPI("GET",
-                                        "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ gameBoardOpponent.idplayer,
+                                        "http://localhost:5000/api/v1/player?idplayer="+ gameBoardOpponent.idplayer,
                                         false,
                                         null);
         playerOpponent = playerOpponent.data;
         var iconOpponent      = sendAPI("GET",
-                                        "http://restapigame.ddns.net:5000/api/v1/icon?idicon="+ playerOpponent.icongame,
+                                        "http://localhost:5000/api/v1/icon?idicon="+ playerOpponent.icongame,
                                         false,
                                         null);
         iconOpponent = iconOpponent.data;
@@ -128,7 +128,7 @@ function SomeoneWon(gameBoardOpponent, gameBoardMy){
     || ( (gameBoardOpponent.pos3) && (gameBoardOpponent.pos5) && (gameBoardOpponent.pos7) ) ){
         // Adversário ganhou o jogo
         var player = sendAPI("GET",
-                             "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ gameBoardOpponent.idplayer,
+                             "http://localhost:5000/api/v1/player?idplayer="+ gameBoardOpponent.idplayer,
                              false,
                              null);
         return player.data;
@@ -145,7 +145,7 @@ function SomeoneWon(gameBoardOpponent, gameBoardMy){
         || ( (gameBoardMy.pos3) && (gameBoardMy.pos5) && (gameBoardMy.pos7) ) ){
             // O jogador atual ganhou o jogo
             var player = sendAPI("GET",
-                                 "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ gameBoardMy.idplayer,
+                                 "http://localhost:5000/api/v1/player?idplayer="+ gameBoardMy.idplayer,
                                  false,
                                  null);
             return player.data;
@@ -157,7 +157,7 @@ function SomeoneWon(gameBoardOpponent, gameBoardMy){
 
 function returnGameBoardOpponent(){
     return sendAPI("GET",
-                   "http://restapigame.ddns.net:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer"),
+                   "http://localhost:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer"),
                    false,
                    null
                    );
@@ -165,18 +165,18 @@ function returnGameBoardOpponent(){
 
 function selectPos(pos){    
     sendAPI("PUT",
-            "http://restapigame.ddns.net:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer") +"&pos="+ pos,
+            "http://localhost:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer") +"&pos="+ pos,
             false,
             null
             );
     var player = sendAPI("GET",
-                         "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+                         "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
                          false,
                          null
                          );
     player = player.data;
     var icon = sendAPI("GET",
-                       "http://restapigame.ddns.net:5000/api/v1/icon?idicon="+ player.icongame,
+                       "http://localhost:5000/api/v1/icon?idicon="+ player.icongame,
                        false,
                        null
                        );
@@ -206,7 +206,7 @@ function disableAllControls(){
 
 function exitGameBoard(){
     sendAPI("DELETE", // Remove o jogador da sala, caso ele tenha saído da partida
-            "http://restapigame.ddns.net:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer"),
+            "http://localhost:5000/api/v1/gameboard?idroom="+ sessionStorage.getItem("idRoom") +"&idplayer="+ sessionStorage.getItem("idPlayer"),
             false,
             null
             );

@@ -51,7 +51,7 @@ function updateAvaliableRooms(){
 
 function getAvaliableRooms(){
     var result = sendAPI("GET",
-                         "http://restapigame.ddns.net:5000/api/v1/RoomPlayer",
+                         "http://localhost:5000/api/v1/RoomPlayer",
                          false,
                          null); 
     return result;
@@ -64,7 +64,7 @@ function activePlayer(){
     json = JSON.stringify(object);
     
     var player = sendAPI("PUT",
-                         "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+                         "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
                          false,
                          json); // Ativar o usuário, caso ainda não esteja ativo
     showNicknamePlayer( player );        
@@ -81,13 +81,13 @@ function desactivePlayer(){
     json = JSON.stringify(object);
 
     sendAPI("PUT",
-            "http://restapigame.ddns.net:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
+            "http://localhost:5000/api/v1/player?idplayer="+ sessionStorage.getItem("idPlayer"),
             false,
             json); // Ativar o usuário, caso ainda não esteja ativo    
 }
 
 function returnPlayer(idplayer){
-    var url = "http://restapigame.ddns.net:5000/api/v1/Player";
+    var url = "http://localhost:5000/api/v1/Player";
     if(idplayer > 0){
         url = url +"?idplayer="+ idplayer;
     } 
@@ -115,7 +115,7 @@ function createRoom(){
     var nameRoom = $("#edNameRoom").val();
     if(nameRoom != ""){        
         var room = sendAPI("POST",
-                           "http://restapigame.ddns.net:5000/api/v1/room?nameroom="+ nameRoom,
+                           "http://localhost:5000/api/v1/room?nameroom="+ nameRoom,
                            false,
                            null           
                            );
