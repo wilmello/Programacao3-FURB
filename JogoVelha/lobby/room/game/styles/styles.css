@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(18, 18, 36);
+}
+
+main{
+    margin: auto;
+    text-align: center;
+    width: 70%;
+    margin-top: 5%;    
+}
+
+table{
+    margin: auto;
+    width: 100%;
+}
+
+table tr{
+    height: 150px;
+}
+
+table tr td{
+    width: 33%;
+}
+
+.cellcolumn1{
+    border-right: 2px solid white;
+}
+
+.cellcolumn3{
+    border-left: 2px solid white;
+}
+
+#cell:hover{
+    background-color: rgb(31, 31, 58);
+}
+
+img{
+    width: 100%;
+}
